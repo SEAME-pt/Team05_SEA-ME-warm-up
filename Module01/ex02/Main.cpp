@@ -2,9 +2,9 @@
 
 int main () {
     Car *sc = new SportsCar; //polymorphism
-    sc->make = "bmw";
-    sc->model = "e36";
-    sc->year = 1998;
+    sc->make = "BMW";
+    sc->model = "M3 E36";
+    sc->year = 1997;
     SportsCar *sc1 = dynamic_cast<SportsCar*>(sc); //downcasting so that set_topspeed works
     if (sc1) {
         sc1->set_topspeed(260);
