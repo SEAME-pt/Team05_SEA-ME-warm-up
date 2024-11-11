@@ -1,6 +1,4 @@
-// Car.hpp
-#ifndef CAR_HPP
-#define CAR_HPP
+#pragma once
 
 #include <iostream>
 
@@ -29,5 +27,3 @@ public:
     void setSpeed(int spd);
     void setDirection(int dir);
 };
-
-#endif

@@ -39,7 +39,7 @@ int Car::getPosition() const { return position; }
 int Car::getSpeed() const { return speed; }
 int Car::getDirection() const { return direction; }
 
-
+// Setters
 void Car::setPosition(int pos) { position = pos; }
 void Car::setSpeed(int spd) { speed = spd; }
 void Car::setDirection(int dir) { direction = dir; }
