@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/matilde/warmup-temp/Modules/Module02/ex00/Car.cpp" "CMakeFiles/SportsCar.dir/Car.cpp.o" "gcc" "CMakeFiles/SportsCar.dir/Car.cpp.o.d"
-  "/home/matilde/warmup-temp/Modules/Module02/ex00/Main.cpp" "CMakeFiles/SportsCar.dir/Main.cpp.o" "gcc" "CMakeFiles/SportsCar.dir/Main.cpp.o.d"
-  "/home/matilde/warmup-temp/Modules/Module02/ex00/SportsCar.cpp" "CMakeFiles/SportsCar.dir/SportsCar.cpp.o" "gcc" "CMakeFiles/SportsCar.dir/SportsCar.cpp.o.d"
+  "/home/matilde/Team05_SEA-ME-warm-up/Module02/ex00/Car.cpp" "CMakeFiles/SportsCar.dir/Car.cpp.o" "gcc" "CMakeFiles/SportsCar.dir/Car.cpp.o.d"
+  "/home/matilde/Team05_SEA-ME-warm-up/Module02/ex00/Main.cpp" "CMakeFiles/SportsCar.dir/Main.cpp.o" "gcc" "CMakeFiles/SportsCar.dir/Main.cpp.o.d"
+  "/home/matilde/Team05_SEA-ME-warm-up/Module02/ex00/SportsCar.cpp" "CMakeFiles/SportsCar.dir/SportsCar.cpp.o" "gcc" "CMakeFiles/SportsCar.dir/SportsCar.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/Car.dir/Car.cpp.o -o Car 
+/usr/bin/c++ CMakeFiles/Car.dir/Car.cpp.o -o Car 
