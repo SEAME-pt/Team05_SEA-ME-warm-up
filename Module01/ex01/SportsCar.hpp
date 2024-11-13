@@ -1,19 +1,16 @@
-#ifndef SPORTSCAR_HPP
-# define SPORTSCAR_HPP
+#pragma once
 
-# include <iostream>
-# include "Car.hpp"
+#include "Car.hpp"
+#include <iostream>
 
-class SportsCar : public Car {
-	public:
-		SportsCar();
-        int top_speed;
-		SportsCar(const SportsCar &other);
-		~SportsCar() override;
-        void drive() override;
-		SportsCar&	operator=(const SportsCar &other);
-	private:
-
+// inherited class
+class SportsCar : public Car
+{
+  public:
+    SportsCar();
+    int top_speed;
+    SportsCar(const SportsCar &other);
+    ~SportsCar() override;
+    void drive() const override;
+    SportsCar &operator=(const SportsCar &other);
 };
-
-# endif

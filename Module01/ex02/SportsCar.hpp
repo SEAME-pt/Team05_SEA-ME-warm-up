@@ -1,30 +1,28 @@
-#ifndef SPORTSCAR_HPP
-# define SPORTSCAR_HPP
+#pragma once
 
-# include <iostream>
-# include "Car.hpp"
+#include "Car.hpp"
+#include <iostream>
 
-//inherited class
-class SportsCar : public Car {
-	public:
-		SportsCar();
-		SportsCar(const SportsCar &other);
-		~SportsCar() override;
-        void drive() override; //polymorphism
-		SportsCar&	operator=(const SportsCar &other);
+// inherited class
+class SportsCar : public Car
+{
+  public:
+    SportsCar();
+    SportsCar(const SportsCar &other);
+    ~SportsCar() override;
+    void drive() const override; // polymorphism
+    SportsCar &operator=(const SportsCar &other);
 
-		//encapsulation
-		int get_topspeed();
-		void set_topspeed(int n);
+    // encapsulation
+    int get_topspeed() const;
+    void set_topspeed(int n);
 
-	private: //encapsulation
-        int top_speed;
-
+  private: // encapsulation
+    int top_speed;
 };
 
-//modular
-namespace CarActions {
-	void performActions(SportsCar *c);
+// modular
+namespace CarActions
+{
+	void performActions(const SportsCar *c);
 }
-
-# endif

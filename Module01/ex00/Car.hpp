@@ -1,18 +1,13 @@
-#ifndef CAR_HPP
-# define CAR_HPP
+#pragma once
+#include <iostream>
 
-# include <iostream>
-
-class Car {
-	public:
-		Car();
-		Car(const Car &other);
-		~Car();
-		Car&	operator=(const Car &other);
-        std::string name;
-        int speed;
-	private:
-
+class Car
+{
+  public:
+    Car();
+    Car(const Car &other);
+    ~Car();
+    Car &operator=(const Car &other);
+    std::string name;
+    int speed;
 };
-
-# endif

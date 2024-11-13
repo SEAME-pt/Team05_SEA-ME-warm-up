@@ -1,33 +1,40 @@
 #include "Car.hpp"
 
-Car::Car() {
-	std::cout << "[ Car default constructor called ]" << std::endl;
+Car::Car()
+{
+    std::cout << "[ Car default constructor called ]" << std::endl;
     name = "";
     speed = 0;
 }
 
-Car::Car(const Car &other) {
-	std::cout << "[ Car copy constructor called ]" << std::endl;
-	if (this != &other) {
-		this->name = other.name;
+Car::Car(const Car &other)
+{
+    std::cout << "[ Car copy constructor called ]" << std::endl;
+    if (this != &other)
+    {
+        this->name = other.name;
         this->speed = other.speed;
-	}
+    }
 }
 
-Car::~Car() {
-	std::cout << "[ Car destructor called ]" << std::endl;
+Car::~Car()
+{
+    std::cout << "[ Car destructor called ]" << std::endl;
 }
 
-Car &Car::operator=(const Car &other) {
-	std::cout << "[ Car copy assignment operator called ]" << std::endl;
-	if (this != &other) {
-		this->name = other.name;
+Car &Car::operator=(const Car &other)
+{
+    std::cout << "[ Car copy assignment operator called ]" << std::endl;
+    if (this != &other)
+    {
+        this->name = other.name;
         this->speed = other.speed;
-	}
-	return *this;
+    }
+    return *this;
 }
 
-int main() {
+int main()
+{
     Car c;
     c.name = "BMW";
     c.speed = 190;
@@ -48,4 +55,5 @@ int main() {
 
     delete c3;
     delete c4;
+    return 0;
 }

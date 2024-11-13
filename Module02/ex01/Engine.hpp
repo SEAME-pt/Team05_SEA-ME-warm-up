@@ -1,23 +1,18 @@
 #pragma once
 
-# include <iostream>
 #include "Part.hpp"
+#include <iostream>
 
-class Engine: public Part {
-	public:
-		Engine();
-		Engine(const Engine &other);
-		~Engine();
-		Engine&	operator=(const Engine &other);
-        void print() override {
-        std::cout << "Engine: " << type << ".\n";
-    }
+class Engine : public Part
+{
+  public:
+    Engine();
+    Engine(const Engine &other);
+    ~Engine();
+    Engine &operator=(const Engine &other);
+    void print() const override;
+    void set_type(std::string type_);
 
-	void	set_type(std::string type_) {
-		type = type_;
-	}
-	
-	private:
-		std::string type;
+  private:
+    std::string type;
 };
-
