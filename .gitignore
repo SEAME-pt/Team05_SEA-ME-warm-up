@@ -1,0 +1,18 @@
+# Ignorar diretórios de build
+build/
+
+# Ignorar arquivos gerados pelo CMake e Qt Creator
+*.user
+*.pro.user
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.log
+*.qrc.dep
+*.qtcsettings.cmake
+*.a
+
+# Ignorar diretórios de testes temporários
+Testing/
