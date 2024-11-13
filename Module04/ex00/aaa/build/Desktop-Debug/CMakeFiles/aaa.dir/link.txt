@@ -1,0 +1,1 @@
+/usr/bin/g++ -DQT_QML_DEBUG -g CMakeFiles/aaa.dir/aaa_autogen/mocs_compilation.cpp.o CMakeFiles/aaa.dir/main.cpp.o CMakeFiles/aaa.dir/mainwindow.cpp.o -o aaa  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.10 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.10 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.10 
