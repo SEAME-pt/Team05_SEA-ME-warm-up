@@ -1,3 +1,0 @@
-/home/matilde/Team05_SEA-ME-warm-up/Module02/ex00/build/CMakeFiles/SportsCar.dir
-/home/matilde/Team05_SEA-ME-warm-up/Module02/ex00/build/CMakeFiles/edit_cache.dir
-/home/matilde/Team05_SEA-ME-warm-up/Module02/ex00/build/CMakeFiles/rebuild_cache.dir
