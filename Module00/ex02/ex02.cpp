@@ -14,57 +14,66 @@
 // ex) ./convert down I’m A SMall man
 // output: i’m a small man
 
+#include <algorithm> // Para std::transform
 #include <iostream>
 #include <string>
-#include <algorithm> // Para std::transform
 
-class SimpleString 
+class SimpleString
 {
-    private:
-        std::string str;
+  private:
+    std::string str;
 
-    public:
-        // Default constructor
-        SimpleString() : str("") {}
+  public:
+    // Default constructor
+    SimpleString() : str("")
+    {
+    }
 
-        // Constructor with parameter
-        SimpleString(const std::string &s) : str(s) {}
+    // Constructor with parameter
+    SimpleString(const std::string &s) : str(s)
+    {
+    }
 
-        // Copy constructor
-        SimpleString(const SimpleString& other) : str(other.str) {}
+    // Copy constructor
+    SimpleString(const SimpleString &other) : str(other.str)
+    {
+    }
 
-        // Copy assignment operator
-        SimpleString& operator=(const SimpleString& other) 
+    // Copy assignment operator
+    SimpleString &operator=(const SimpleString &other)
+    {
+        if (this != &other)
         {
-            if (this != &other)
-            {
-                str = other.str;
-            }
-            return *this;
+            str = other.str;
         }
+        return *this;
+    }
 
-        // Destructor
-        ~SimpleString() {}
+    // Destructor
+    ~SimpleString()
+    {
+    }
 
-        void toUpperCase() 
-        {
-            std::transform(str.begin(), str.end(), str.begin(), ::toupper);
-        }
+    void toUpperCase()
+    {
+        std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+    }
 
-        void toLowerCase() 
-        {
-            std::transform(str.begin(), str.end(), str.begin(), ::tolower);
-        }
+    void toLowerCase()
+    {
+        std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+    }
 
-        void print() const 
-        {
-            std::cout << str << std::endl;
-        }
+    void print() const
+    {
+        std::cout << str << std::endl;
+    }
 };
 
-
-int main(int argc, char* argv[]) {
-    if (argc < 3) {
+int main(int argc, char *argv[])
+{
+    if (argc < 3)
+    {
         std::cerr << "Uso: " << argv[0] << " {up|down} {string}" << std::endl;
         return 1;
     }
@@ -72,24 +81,24 @@ int main(int argc, char* argv[]) {
     std::string command = argv[1];
     std::string inputString = argv[2];
 
-    for (int i = 3; i < argc; ++i) 
+    for (int i = 3; i < argc; ++i)
     {
         inputString += " " + std::string(argv[i]);
     }
 
     SimpleString myString(inputString);
 
-    if (command == "up") 
+    if (command == "up")
     {
         myString.toUpperCase();
         myString.print();
-    } 
+    }
     else if (command == "down")
     {
         myString.toLowerCase();
         myString.print();
-    } 
-    else 
+    }
+    else
     {
         std::cerr << "Invalid command. Use 'up' for uppercase or 'down' for lowercase." << std::endl;
         return 1;

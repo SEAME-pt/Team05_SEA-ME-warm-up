@@ -1,23 +1,18 @@
-#ifndef WHEEL_HPP
-# define WHEEL_HPP
+#pragma once
 
-# include <iostream>
 #include "Part.hpp"
+#include <iostream>
 
-class Wheel: public Part {
-	public:
-		Wheel();
-		Wheel(const Wheel &other);
-		~Wheel();
-		Wheel&	operator=(const Wheel &other);
-        void print() override {
-        std::cout << "Wheel: " << type << ".\n";
-    }
-	void	set_type(std::string type_) {
-		type = type_;
-	}
-	private:
-		std::string type;
+class Wheel : public Part
+{
+  public:
+    Wheel();
+    Wheel(const Wheel &other);
+    ~Wheel();
+    Wheel &operator=(const Wheel &other);
+    void print() const override;
+    void set_type(std::string type_);
+
+  private:
+    std::string type;
 };
-
-# endif

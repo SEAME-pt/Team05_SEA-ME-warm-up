@@ -1,6 +1,5 @@
 # SEA:ME Warm Up
 ## Introduction to peer-peer learning & collaboration  
-</br>
 
 
 # Introduction
@@ -17,6 +16,13 @@ cmake --build .
 ./executable
 ```
 
+# DoxyGen
+To generate the Doxyfile run the following commands:
+```bash
+mkdir doc
+doxygen Doxyfile
+xdg-open doc/html/index.html
+```
 
 
 # Overview

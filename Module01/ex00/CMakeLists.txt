@@ -5,4 +5,3 @@ project(Car)
 set(SOURCE Car.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE})
-

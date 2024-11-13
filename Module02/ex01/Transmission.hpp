@@ -1,23 +1,18 @@
 #pragma once
 
-# include <iostream>
 #include "Part.hpp"
+#include <iostream>
 
-class Transmission: public Part {
-	public:
-		Transmission();
-		Transmission(const Transmission &other);
-		~Transmission();
-		Transmission&	operator=(const Transmission &other);
-        void print() override {
-        std::cout << "Transmission: " << type << ".\n";
-    }
+class Transmission : public Part
+{
+  public:
+    Transmission();
+    Transmission(const Transmission &other);
+    ~Transmission();
+    Transmission &operator=(const Transmission &other);
+    void print() const override;
+    void set_type(std::string type_);
 
-	void	set_type(std::string type_) {
-		type = type_;
-	}
-	
-	private:
-		std::string type;
-
+  private:
+    std::string type;
 };
