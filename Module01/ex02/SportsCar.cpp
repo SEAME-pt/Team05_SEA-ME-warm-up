@@ -38,11 +38,11 @@ void SportsCar::drive() const
 // modularity
 namespace CarActions
 {
-void performActions(const SportsCar *c)
-{
-    std::cout << "Car " << c->make << " " << c->model << " " << c->year << " edition." << std::endl;
-    c->drive();
-}
+	void performActions(const SportsCar *c)
+		{
+			std::cout << "Car " << c->make << " " << c->model << " " << c->year << " edition." << std::endl;
+			c->drive();
+		}
 } // namespace CarActions
 
 int SportsCar::get_topspeed() const

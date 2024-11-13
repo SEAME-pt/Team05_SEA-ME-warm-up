@@ -24,5 +24,5 @@ class SportsCar : public Car
 // modular
 namespace CarActions
 {
-void performActions(SportsCar *c);
+	void performActions(const SportsCar *c);
 }
