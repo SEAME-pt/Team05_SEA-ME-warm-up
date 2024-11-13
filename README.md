@@ -7,6 +7,18 @@
 A 2-weeks intensive workshop to introduce peer-peer learning and collaboration among students using GitHub and Qt is a great way to help students develop valuable skills in teamwork, software development, and open-source collaboration.
 
 
+# Compilation
+To compile each exercise of each module, you should navigate to the directory of the specific exercise and run the following commands:
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
+./executable
+```
+
+
+
 # Overview
 Here is an overview of how the workshop is structured:
 

@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/SportsCar.dir/Car.cpp.o CMakeFiles/SportsCar.dir/SportsCar.cpp.o CMakeFiles/SportsCar.dir/Main.cpp.o -o SportsCar 
