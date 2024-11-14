@@ -23,6 +23,10 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_btn_save_clicked();
+
+    void on_btn_load_clicked();
+
 private:
     Ui::MainWindow *ui;
     ContactList* contactList_;

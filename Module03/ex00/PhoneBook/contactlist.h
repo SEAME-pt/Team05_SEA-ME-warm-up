@@ -1,6 +1,10 @@
 #ifndef CONTACTLIST_H
 #define CONTACTLIST_H
 
+#include <QFile>
+#include <QTextStream>
+#include <QMessageBox>
+
 # include "contact.h"
 # include <iostream>
 # include <iomanip>
@@ -21,6 +25,8 @@ public:
     bool    findContact(int index, std::string& search) const;
     void    addContact(const Contact& contact);
     void    removeContact(int index);
+    bool    saveToFile(QString& fileName) const;
+    bool    loadFromFile(const QString& fileName);
     int     getSizeContactsList();
 
 

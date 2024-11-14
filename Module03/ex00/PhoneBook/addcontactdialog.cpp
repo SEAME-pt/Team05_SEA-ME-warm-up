@@ -42,3 +42,9 @@ void AddContactDialog::on_btn_save_contact_clicked()
 
 }
 
+
+void AddContactDialog::on_btn_cancel_clicked()
+{
+    close();
+}
+

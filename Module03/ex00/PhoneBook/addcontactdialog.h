@@ -19,6 +19,8 @@ public:
 private slots:
     void on_btn_save_contact_clicked();
 
+    void on_btn_cancel_clicked();
+
 private:
     Ui::AddContactDialog *ui;
     ContactList* contactList_;
