@@ -21,14 +21,13 @@ public:
     ContactList(const ContactList &copy);
     ~ContactList();
 
-    Contact getContact(int index) const;
-    bool    findContact(int index, std::string& search) const;
-    void    addContact(const Contact& contact);
-    void    removeContact(int index);
-    bool    saveToFile(QString& fileName) const;
-    bool    loadFromFile(const QString& fileName);
-    int     getSizeContactsList();
-
+    Contact&    getContact(int index);
+    bool        findContact(int index, std::string& search) const;
+    void        addContact(const Contact& contact);
+    void        removeContact(int index);
+    bool        saveToFile(QString& fileName) const;
+    bool        loadFromFile(const QString& fileName);
+    int         getSizeContactsList();
 
     ContactList &operator=(const ContactList &copy);
 

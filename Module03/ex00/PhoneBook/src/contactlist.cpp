@@ -1,7 +1,4 @@
 #include "contactlist.h"
-#include <algorithm>
-#include <string>
-#include <QDebug>
 
 ContactList::ContactList() {}
 
@@ -26,7 +23,7 @@ void ContactList::removeContact(int index)
     contacts_.erase(contacts_.begin() + index);
 }
 
-Contact ContactList::getContact(int index) const
+Contact& ContactList::getContact(int index)
 {
     return contacts_[index];
 }

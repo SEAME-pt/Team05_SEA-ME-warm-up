@@ -23,25 +23,27 @@ void AddContactDialog::on_btn_save_contact_clicked()
     std::string phoneNumber = ui->lineEdit_3->text().toStdString();
     std::string email = ui->lineEdit_4->text().toStdString();
 
-    Contact contact;
+    if (!name.empty() && !nickName.empty() && !phoneNumber.empty() && !email.empty())
+    {
+        Contact contact;
 
-    contact.setName(name);
-    contact.setNickName(nickName);
-    contact.setPhoneNumber(phoneNumber);
-    contact.setEmail(email);
+        contact.setName(name);
+        contact.setNickName(nickName);
+        contact.setPhoneNumber(phoneNumber);
+        contact.setEmail(email);
 
-    this->contactList_->addContact(contact);
-    QMessageBox::information(this, "Contact Saved", "Contact Saved Whith Success!");
+        this->contactList_->addContact(contact);
+        QMessageBox::information(this, "Contact Saved", "Contact Saved With Success!");
 
-    ui->lineEdit->clear();
-    ui->lineEdit_2->clear();
-    ui->lineEdit_3->clear();
-    ui->lineEdit_4->clear();
-    ui->lineEdit->setFocus();
-
-
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
+        ui->lineEdit_3->clear();
+        ui->lineEdit_4->clear();
+        ui->lineEdit->setFocus();
+    }
+    else
+        QMessageBox::warning(this, "Empty Fields", "All fields must be filled in!");
 }
-
 
 void AddContactDialog::on_btn_cancel_clicked()
 {

@@ -39,7 +39,7 @@
       <widget class="QLineEdit" name="lineEdit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="btn_search">
        <property name="minimumSize">
         <size>
          <width>150</width>
@@ -72,7 +72,46 @@
    <item row="2" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
+      <widget class="QPushButton" name="btn_edit">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Edit Contact</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="btn_delete">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(192, 28, 40);
+    color: white;       
+}
+
+QPushButton:hover {
+    background-color: rgb(165, 29, 45); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(165, 29, 45); 
+}</string>
+       </property>
        <property name="text">
         <string>Delete Contact</string>
        </property>

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(PhoneBook VERSION 0.1 LANGUAGES CXX)
+project(PhoneBook VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -8,46 +8,31 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_BUILD_TYPE Debug)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-)
+include_directories(include)
+
+file(GLOB_RECURSE PROJECT_HEADERS "include/*.h")
+file(GLOB_RECURSE PROJECT_SOURCES "src/*.cpp")
+file(GLOB PROJECT_UI_FILES "ui/*.ui")
+
+set(CMAKE_AUTOUIC_SEARCH_PATHS ui)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(PhoneBook
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-
-        contactlist.h contactlist.cpp
-        addcontactdialog.h addcontactdialog.cpp addcontactdialog.ui
-        searchcontactsdialog.h searchcontactsdialog.cpp searchcontactsdialog.ui
-        contact.h contact.cpp
-        contactsfounddialog.h contactsfounddialog.cpp contactsfounddialog.ui
-
+        ${PROJECT_HEADERS}
+        ${PROJECT_UI_FILES}
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET PhoneBook APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
-    if(ANDROID)
-        add_library(PhoneBook SHARED
-            ${PROJECT_SOURCES}
-        )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-    else()
-        add_executable(PhoneBook
-            ${PROJECT_SOURCES}
-        )
-    endif()
+    add_executable(PhoneBook 
+        ${PROJECT_SOURCES} 
+        ${PROJECT_HEADERS} 
+        ${PROJECT_UI_FILES}
+    )
 endif()
 
 target_link_libraries(PhoneBook PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

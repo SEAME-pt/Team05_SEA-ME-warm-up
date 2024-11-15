@@ -1,8 +1,5 @@
 #include "searchcontactsdialog.h"
 #include "ui_searchcontactsdialog.h"
-#include "contactsfounddialog.h"
-#include <string>
-#include <QMessageBox>
 
 SearchContactsDialog::SearchContactsDialog(ContactList* contactList, QWidget *parent)
     : QDialog(parent)
@@ -69,18 +66,26 @@ void SearchContactsDialog::on_btn_delete_clicked()
     if (row >= 0)
     {
         int id = ui->tableWidget->item(row, 0)->text().toInt();
-        contactList_->removeContact(id - 1);
-        ui->tableWidget->removeRow(row);
-        this->loadContacts();
-        QMessageBox::information(this, "Contact Deleted", "Contact Was Deleted With Success!");
 
-        ui->tableWidget->clearSelection();
-        ui->tableWidget->update();
+        QMessageBox::StandardButton option;
+
+        option = QMessageBox::question(this, "Confirm Deletion", "Do you really want to delete the contact?", QMessageBox::Yes | QMessageBox::No);
+
+        if (option == QMessageBox::Yes)
+        {
+            contactList_->removeContact(id - 1);
+            ui->tableWidget->removeRow(row);
+            this->loadContacts();
+            QMessageBox::information(this, "Contact Deleted", "Contact Was Deleted With Success!");
+
+            ui->tableWidget->clearSelection();
+            ui->tableWidget->update();
+        }
     }
 }
 
 
-void SearchContactsDialog::on_pushButton_2_clicked()
+void SearchContactsDialog::on_btn_search_clicked()
 {
     std::string name = ui->lineEdit->text().toStdString();
 
@@ -96,5 +101,27 @@ void SearchContactsDialog::on_pushButton_2_clicked()
             }
         }
     }
+}
+
+
+void SearchContactsDialog::on_btn_edit_clicked()
+{
+    QList<QTableWidgetItem *> selectedItems = ui->tableWidget->selectedItems();
+
+    if (selectedItems.isEmpty()) {
+        QMessageBox::warning(this, "Warning", "Please select a contact to edit.");
+        return;
+    }
+
+    int row = ui->tableWidget->currentRow();
+    if (row >= 0)
+    {
+        int id = ui->tableWidget->item(row, 0)->text().toInt();
+
+        EditContactDialog editContact(contactList_, id - 1);
+        editContact.exec();
+        loadContacts();
+    }
+
 }
 

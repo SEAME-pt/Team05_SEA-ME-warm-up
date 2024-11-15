@@ -2,6 +2,7 @@
 #define ADDCONTACTDIALOG_H
 
 #include <QDialog>
+#include <string>
 #include "contactlist.h"
 
 namespace Ui {

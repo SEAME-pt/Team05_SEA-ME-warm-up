@@ -2,6 +2,10 @@
 #define SEARCHCONTACTSDIALOG_H
 
 #include <QDialog>
+#include <QMessageBox>
+#include <string>
+#include "contactsfounddialog.h"
+#include "editcontactdialog.h"
 #include "contactlist.h"
 
 namespace Ui {
@@ -20,7 +24,9 @@ public:
 private slots:
     void on_btn_delete_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_btn_search_clicked();
+
+    void on_btn_edit_clicked();
 
 private:
     Ui::SearchContactsDialog *ui;
