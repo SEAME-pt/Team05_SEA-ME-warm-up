@@ -973,7 +973,25 @@ INPUT                  = Module02/ex00/Main.cpp \
                         Module01/ex02/SportsCar.hpp \
                         Module01/ex02/Car.hpp \
                         Module01/ex01/SportsCar.hpp \
-                        Module01/ex01/Car.hpp 
+                        Module01/ex01/Car.hpp \
+                        Module03/ex00/PhoneBook/include/addcontactdialog.h \
+                        Module03/ex00/PhoneBook/include/contact.h \
+                        Module03/ex00/PhoneBook/include/contactlist.h \
+                        Module03/ex00/PhoneBook/include/contactsfounddialog.h \
+                        Module03/ex00/PhoneBook/include/editcontactdialog.h \
+                        Module03/ex00/PhoneBook/include/mainwindow.h \
+                        Module03/ex00/PhoneBook/include/searchcontactsdialog.h \
+                        Module03/ex00/PhoneBook/src/addcontactdialog.cpp \
+                        Module03/ex00/PhoneBook/src/contact.cpp \
+                        Module03/ex00/PhoneBook/src/contactlist.cpp \
+                        Module03/ex00/PhoneBook/src/contactsfounddialog.cpp \
+                        Module03/ex00/PhoneBook/src/editcontactdialog.cpp \
+                        Module03/ex00/PhoneBook/src/main.cpp \
+                        Module03/ex00/PhoneBook/src/mainwindow.cpp \
+                        Module03/ex00/PhoneBook/src/searchcontactsdialog.cpp 
+
+
+
                     
 
 # This tag can be used to specify the character encoding of the source files
@@ -1015,7 +1033,8 @@ INPUT_FILE_ENCODING    =
 # *.f18, *.f, *.for, *.vhd, *.vhdl, *.ucf, *.qsf and *.ice.
 
 FILE_PATTERNS          = *.cpp \
-                        *.hpp
+                        *.hpp \
+                        *.h
                     
                        
 
