@@ -18,7 +18,7 @@
 # define HEADER_BOOKMARK	"|Index     |Name      |Nickname  |"
 # define INVALID_INDEX		"Invalid index. Check the first column in the list above."
 # define ZERO_INDEX			"Zero is not a valid index! Check the first column in the list above."
-# define BOOKMARK			"You can choice a index to show the informations about your contact or choice '0' to BOOKMARK a contact."
+# define BOOKMARK			"You can choice a index to show the informations about your contact or choice '0' to BOOKMARK/UNBOOKMARK a contact."
 # define MAX_CONTACTS       10
 
 void		checkCtrlD();

@@ -7,7 +7,7 @@ void	checkCtrlD()
 	{
 		std::cout << std::endl;
 		std::cout << "exit" << std::endl;
-		exit(1);
+		exit(0);
 	}
 }
 

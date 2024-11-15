@@ -1,0 +1,38 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout do código
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Configurar o CMake e gerar o build
+    - name: Configure CMake
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+    
+    # Compilar o projeto
+    - name: Build
+      run: |
+        cd build
+        make
+    
+    # Executar testes (caso você tenha algum executável para testar)
+    - name: Run Tests
+      run: |
+        cd build
+        ./PhoneBook < ../tests/test_input.txt

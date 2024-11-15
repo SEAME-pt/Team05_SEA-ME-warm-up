@@ -342,7 +342,7 @@ void	PhoneBook::bookMarkContact()
 	std::string input;
 	int index;
 
-	std::cout << "Choice a index to bookmark the contact or '0' to exit!" << std::endl;
+	std::cout << "Choice a index to bookmark/unbookmark the contact or '0' to exit!" << std::endl;
 	std::cout << std::endl << "Index: ";
 	std::getline(std::cin, input);
 	checkCtrlD();
@@ -355,7 +355,7 @@ void	PhoneBook::bookMarkContact()
 		else if (index >= 1 && index <= this->contacts_.size())
 		{
 			this->contacts_[index - 1].setIsBookMarked(!this->contacts_[index - 1].getIsBookMarked());
-			std::cout << "Your contact was bookmarked with sucess!" << std::endl << std::endl;
+			std::cout << "Your contact was bookmarked/unbookmarked with sucess!" << std::endl << std::endl;
 		}
 		else
 		{

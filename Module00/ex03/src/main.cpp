@@ -17,7 +17,7 @@ int main()
 		{
 			std::cout << std::endl;
 			std::cout << "exit" << std::endl;
-			exit(1);
+			exit(0);
 		}
 		if (command == "ADD" || command == "add")
 			phoneBook.addContact();
