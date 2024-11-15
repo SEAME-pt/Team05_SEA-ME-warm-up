@@ -19,6 +19,7 @@ cmake --build .
 # DoxyGen
 To generate the Doxyfile run the following commands:
 ```bash
+sudo apt install doxygen
 mkdir doc
 doxygen Doxyfile
 xdg-open doc/html/index.html
